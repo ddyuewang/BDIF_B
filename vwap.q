@@ -1,4 +1,3 @@
-//quant lib
 Pi:3.14159265359;
 
 // use maxInt/getUniform from rng of qcs - this exercise mainly use dictionary of qcs
@@ -79,7 +78,7 @@ yearMiliseconds:365*24*60*60*1000;
     };
 
 // set up the number of trade per day per stocl
-num_trade:10000;
+num_trade:1000;
 
 // assuming there are 15 stocks
 .qcs.sample.createSampleStock:{[days]
@@ -88,7 +87,7 @@ num_trade:10000;
     delete from `.qcs.sample.container;
 
     // create symbol of the data
-    sym:`stock1`stock2`stock3`stock4`stock5`stock6`stock7`stock8`stock9`stock10`stock11`stock12`stock13`stock14`stock15;
+    sym:`stock1`stock2`stock3`stock4`stock5`stock6`stock7`stock8`stock9`stock10`stock11`stock12`stock13`stock14`stock15`stock16`stock17`stock18`stock19`stock20`stock20`stock21`stock22`stock23`stock24`stock25;
 
     // construct 30 trading days with weekends removed
 
@@ -124,12 +123,12 @@ num_trade:10000;
     };
 
 // file to test the output
-//.qcs.sample.createSampleStock[30]; //0.6gb will run around 7-8 seconds
-//.qcs.sample.getVwap[] //200-300 ms.. fast enough
-//res:.qcs.sample.getVwap[];
+//.qcs.sample.createSampleStock[30]; //
+//.qcs.sample.getVwap[] //
+//vwap_table:.qcs.sample.getVwap[];
 
 //.Q.w[] //check memory in Q
 
 // saving to the output
 //`:stockTimeSeries.csv 0:.h.tx[`csv; .qcs.sample.container];
-//`:stockVWAP.csv 0:.h.tx[`csv; res];
+//`:stockVWAP.csv 0:.h.tx[`csv; vwap_table];
