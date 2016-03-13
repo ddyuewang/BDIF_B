@@ -13,5 +13,5 @@ To test the file:
 2. open q and load file by \l vwap.q
 3. .qcs.sample.createSampleStock[30]; (this will create the simulated stock, save it to .qcs.sample.container)
 4. vwap_table:.qcs.sample.getVwap[]; (get vwap price and save to table defined)
-5. \\`:stockTimeSeries.csv 0:.h.tx[`csv; .qcs.sample.container;  (save to the stockTimeSeries.csv)
-6. \\`:stockVWAP.csv 0:.h.tx[`csv; res];(save to the stockVWAP.csv)
+5. `:stockTimeSeries.csv 0:.h.tx[`csv; .qcs.sample.container;  (save to the stockTimeSeries.csv)
+6. `:stockVWAP.csv 0:.h.tx[`csv; res];(save to the stockVWAP.csv)
