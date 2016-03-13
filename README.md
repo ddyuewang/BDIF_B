@@ -18,13 +18,13 @@ Note 2: (if need change, change the symbol line by appending more symbols
 
 3rd parameter: is the num of days
 
-To test the file:
+To test the file: please see the line 126 of vwap.q (line 126 test the stock simulation, line 127 test the vwap calculation)
 
 
 1. download the file to local repository
 
 
-2. open q and load file by \l vwap.q3. 
+2. open q and load file by \l vwap.q. 
  
 
 3. .qcs.sample.createSampleStock[30]; (this will create the simulated stock, save it to .qcs.sample.container)
