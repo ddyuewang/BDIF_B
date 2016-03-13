@@ -77,7 +77,7 @@ yearMiliseconds:365*24*60*60*1000;
 
     };
 
-// set up the number of trade per day per stocl
+// set up the number of trade per day per stock to be 1000
 num_trade:1000;
 
 // assuming there are 15 stocks
@@ -86,7 +86,7 @@ num_trade:1000;
     // clear the previous simulation data
     delete from `.qcs.sample.container;
 
-    // create symbol of the data
+    // create symbol of the data, currently assuming there are 25 stocks
     sym:`stock1`stock2`stock3`stock4`stock5`stock6`stock7`stock8`stock9`stock10`stock11`stock12`stock13`stock14`stock15`stock16`stock17`stock18`stock19`stock20`stock20`stock21`stock22`stock23`stock24`stock25;
 
     // construct 30 trading days with weekends removed
@@ -123,9 +123,8 @@ num_trade:1000;
     };
 
 // file to test the output
-//.qcs.sample.createSampleStock[30]; //
-//.qcs.sample.getVwap[] //
-//vwap_table:.qcs.sample.getVwap[];
+//.qcs.sample.createSampleStock[30]; // generate the synthetic data - take a bit to run
+//vwap_table:.qcs.sample.getVwap[]; // calculate the vwap price
 
 //.Q.w[] //check memory in Q
 
